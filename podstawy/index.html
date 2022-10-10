@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Szablon</title>
         <style>
+            body {
+                background-color: palegreen;
+            }
             hr {
                 height: 3px;
                 background-color: black;
@@ -15,9 +18,37 @@
                 margin: auto;
                 width: 200px;
             }
+            .container {
+                width: 700px;
+                margin: auto;
+                text-align: center;
+                background-color: #666666;
+                min-height: 200px;
+            }
+            .Container {
+                width: 700px;
+                margin: auto;
+                background-color: blue;
+                min-height: 250px;
+                text-align: center;
+                color: white;
+                padding-top: 30px;
+            }
+            .Suchanowski {
+                width: 700px;
+                margin: auto;
+                background-color: blueviolet;
+                text-align: center;
+                padding-top: 30px;
+                color: white;
+            }
+            p {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
         </style>
     </head>
 
+        <div class = "container"> 
         <h1> Piersza strona JS </h1>
             <script>
                 document.write("Tekst JS") 
@@ -32,10 +63,49 @@
             
             <center> <hr> <script> 
                 if(true)
-                    document.write("<------- Tutaj są psy i gowniarze -------> ")
-            </script></center>
+                    //document.write("<------- Tutaj są psy i gowniarze -------> ")
+            </script> </center>|
+
             <hr>
             
-            <p> Tekst po skrypcie</p>
+            <marquee><p> Tekst po skrypcie</p></marquee>
+        </div>
+
+        <div class = "Container">
+            <script>
+                var pierwszaZmienna = 2;
+                pierwszaZmienna = pierwszaZmienna + 1;
+                document.writeln("zawartosc zmiennej " + pierwszaZmienna);
+                document.writeln("<br>");
+                pierwszaZmienna = "Hello World!";
+                document.writeln("<br>");
+                document.writeln(pierwszaZmienna);
+                pierwszaZmienna = true;
+                document.writeln("<br>")
+                document.writeln("<br>")
+                document.writeln(pierwszaZmienna);
+                document.writeln("<br>")
+                document.writeln("<br>")
+                document.writeln("Operatory porównania: ");
+
+                // == równość
+                // != różność 
+                // < mniejsze od
+                // > większe od
+                // => większe bądź równe
+                // <= mniejsze badź równe
+
+                let lewaZmienna = 5;
+                let prawaZmienna = "5";
+
+                if(lewaZmienna === prawaZmienna)
+                    document.write("Zmienne równe");
+                else
+                    document.write("Zmienne nie równe");
+
+
+            </script>
+        </div>
+        
     </body>
 </html>
