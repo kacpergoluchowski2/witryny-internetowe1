@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
@@ -51,36 +51,47 @@
                         document.writeln("<br>");
 
                     }
-
                     wyswietlZmienne();
+                        /**
 
-                    function  FunkcjaZeZmiennymi()
-                    {
-                        //var zm4 = 99; ---> ZMIENNA ZM4 POZA FUNKCJĄ NIE ISTNIEJE
-                        //let zm5 = 55; ---> ZMIENNA ZM5 POZA FUNKCJĄ NIE ISTNIEJE
-                        zm6 = 77; // ---> ZMIENNA ZM6 JEST FUNKCJĄ GLOBALNĄ, ISTNIEJE POZA FUNKCJA
-                    }
-                    FunkcjaZeZmiennymi();
-
-                    document.writeln("Zm4 " + zm4);
-                    document.writeln("<br>");
-                    document.writeln("Zm5 " + zm5);
-                    document.writeln("<br>");
-                    document.writeln("Zm6 " + zm6);
-                    document.writeln("<br>");
-                    
-                    function WytlumaczenieValLet()
-                    {
-                        if(true)    
+                        function  FunkcjaZeZmiennymi()
                         {
-                            var zm7 = 12; 
-                            let zm8 = 16;
+                            //var zm4 = 99; ---> ZMIENNA ZM4 POZA FUNKCJĄ NIE ISTNIEJE
+                            //let zm5 = 55; ---> ZMIENNA ZM5 POZA FUNKCJĄ NIE ISTNIEJE
+                            zm6 = 77; // ---> ZMIENNA ZM6 JEST FUNKCJĄ GLOBALNĄ, ISTNIEJE POZA FUNKCJA
                         }
-                        document.writeln("Zm7 " + zm7);
-                        document.write("Zm8 " + zm8);
-                    }
-                    WytlumaczenieValLet();
+                        FunkcjaZeZmiennymi();
 
+                        document.writeln("Zm4 " + zm4);
+                        document.writeln("<br>");
+                        document.writeln("Zm5 " + zm5);+
+                        document.writeln("<br>");
+                        document.writeln("Zm6 " + zm6);
+                        document.writeln("<br>");
+                        
+                        function WytlumaczenieValLet()
+                        {
+                            if(true)    
+                            {
+                                var zm7 = 12; 
+                                let zm8 = 16;
+                            }
+                            document.writeln("Zm7 " + zm7);
+                            document.write("Zm8 " + zm8);
+                        }
+                        WytlumaczenieValLet();
+
+                        **/
+                    function FunkcjaPetlowa()
+                    {
+                        for(i = 0; i < 10; i++)
+                        {
+                            document.writeln(i)
+                            document.writeln("<br>")
+                            
+                        }
+                    }
+                    FunkcjaPetlowa();
                 </script>
             </div>
     </body>
