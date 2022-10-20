@@ -9,7 +9,7 @@
             #mateusz {
                 text-align: center;
                 margin: auto;
-                width: 30%;
+                width: 60%;
                 background-color: aqua;
                 min-height: 700px;
                 font-size: 25px;
@@ -28,8 +28,8 @@
                     {
                         document.writeln("Hello " + a);
                         document.writeln("<br/>");
-                        document.writeln(b + " jest debilem");
-                        document.writeln("Sram na " + b)
+                        //document.writeln(b + " jest debilem");
+                        //document.writeln("Sram na " + b)
                     }
                     var a = "Kacper";
                     var b = "Mateusz";
@@ -90,8 +90,27 @@
                             document.writeln("<br>")
                             
                         }
+                        document.write("Mateusz mikolajczyk nie umie programowac i jest glupi")
                     }
                     FunkcjaPetlowa();
+
+                    function FunkcjaDwaParametry(parametr, parametr2)
+                    {
+                        document.write("<br>");
+                        document.write(parametr);
+                        document.write("<br>");
+                        document.write(parametr2);
+                    }
+                    FunkcjaDwaParametry(15, 34)
+                    function Suma(a, b)
+                    {
+                        var wynik; 
+                        wynik = a + b;
+                        return wynik;
+                    }
+                    var wynikFunkcji = Suma(15,6);
+                    document.write("<br>")
+                    document.write(wynikFunkcji)
                 </script>
             </div>
     </body>

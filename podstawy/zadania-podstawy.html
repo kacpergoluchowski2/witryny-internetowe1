@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zadania</title>
+    </head>
+    <body>
+        <script>
+            function zadanie1()
+            { 
+                for(let i = 0; i < 11; i++)
+                {
+                    document.write(i + " ");
+                }
+            }
+            zadanie1();
+
+            function zadanie2(parametr)
+            {
+                if(parametr%2==0)
+                {
+                    document.write("Liczba parzysta");
+                }
+                else
+                {
+                    document.write("Liczba nieparzysta");
+                }
+                
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie2(16);
+
+            function zadanie3 (a, b)
+            {
+                if(a==b)
+                {
+                    document.write("Wartosci sa identyczne i maja taka sama wartosc");
+                }
+                else
+                {
+                    document.write("Wartosci sa inne")
+                }
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie3(2, 2)
+
+            function zadanie4(parametr)
+            {
+                switch(parametr)
+                {
+                    case 0:
+                    case 7:
+                        document.write("Niedziela")
+                        break;
+                    case 1:
+                        document.write("Poniedzialek");
+                        break;
+                    case 2:
+                        document.write("Wtorek");
+                        break;
+                    case 3:
+                        document.write("Sroda");
+                        break;
+                    case 4:
+                        document.write("Czwartek");
+                        break;
+                    case 5:
+                        document.write("Piatek");
+                        break;
+                    case 6:
+                        document.write("Sobota");
+                        break;
+                    default:
+                        document.write("Podales zla liczbe");
+                    
+                }
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie4(7);
+            document.write("<br>");
+            function zadanie5()
+            {
+                var wynik;
+                for(var i = 0; i < 11; i++)
+                {
+                    document.write("<br>")
+                    for(var j = 0; j < 11; j++)
+                    {
+                        wynik = i*j;
+                        document.writeln(i + " * " + j + " " + " = " + wynik);
+                        document.write("<br>");
+                    }
+                }
+
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie5();
+
+            function zadanie6(parametr)
+            {
+                document.write(parametr + " na binarny = " + parametr.toString(2));
+            }
+            document.write("<br>");
+            document.write("<br>");
+            zadanie6(15);
+           
+        </script>
+    </body>
+</html>
