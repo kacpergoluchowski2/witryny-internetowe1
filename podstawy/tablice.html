@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Tablice </title>
+    </head>
+    <body>
+        <script>
+            let tablica = [5];
+            tablica[0] = 15;
+            tablica[1] = "Ala";
+            tablica[2] = "78";
+            tablica[3] = 14;
+            tablica[4] = true;
+
+            for(let i = 0; i < tablica.length; i++)
+            {
+                x=i+1;
+                document.write("element nr " + x + ". " + tablica[i] + "<br>");
+            }
+            document.write("<br>");
+            function showArray(param)
+            {
+                for(let i = 0; i < param.length; i++)
+                {
+                    document.write(param[i] + "<br>");
+                }
+            }
+            showArray(tablica);
+
+            function displayParameters(p1, p2)
+            {
+                document.write(p1 + "<br>");
+                document.write(p2 + "<br>");
+                
+                document.write("<strong>Wyświetlenie wszystkich parametrów</strong><br>");
+                for(let i = 0; i < arguments.length; i++)
+                {
+                    document.write(arguments[i] + " ");
+                }
+            }
+            document.write("*******************<br>");
+            displayParameters(3,7, 19, 52, 36);
+
+            let tab = [15, 30, 45, 60, 20];
+
+            function maxNumber(param)
+            {
+                let maks=0;
+                for(let i = 0; i < param.length-1; i++)
+                {
+                    if(maks<tab[i]);
+                        maks = tab[i];
+                }
+                document.write("Najwieksza liczba to " + maks);
+            }
+            document.write("<br>");
+            maxNumber(tab);
+            
+        </script>
+    </body>
+</html>
