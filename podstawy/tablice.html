@@ -44,18 +44,21 @@
             document.write("*******************<br>");
             displayParameters(3,7, 19, 52, 36);
 
-            let tab = [15, 30, 45, 60, 20];
+            let tab = [15, 90, 145, 60, 20];
+            var maks=0;
 
             function maxNumber(param)
             {
-                let maks=0;
-                for(let i = 0; i < param.length-1; i++)
+                for(let i = 0; i < param.length; i++)
                 {
-                    if(maks<tab[i]);
-                        maks = tab[i];
+                    if(maks<param[i])
+                    {
+                        maks = param[i];
+                    }
                 }
-                document.write("Najwieksza liczba to " + maks);
+                document.write("Najwieksza liczba z tablicy to " + maks);
             }
+
             document.write("<br>");
             maxNumber(tab);
             
