@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Tablice </title>
+        <style>
+            body {
+                text-align: center;
+                padding-top: 15px;
+            }
+        </style>
     </head>
     <body>
         <script>
@@ -44,21 +50,41 @@
             document.write("*******************<br>");
             displayParameters(3,7, 19, 52, 36);
 
-            let tab = [15, 30, 45, 60, 20];
+            let tab = [15, 90, 145, 1550, 211110];
+            var maks=0;
 
             function maxNumber(param)
             {
-                let maks=0;
-                for(let i = 0; i < param.length-1; i++)
+                for(let i = 0; i < param.length; i++)
                 {
-                    if(maks<tab[i]);
-                        maks = tab[i];
+                    if(maks<param[i])
+                    {
+                        maks = param[i];
+                    }
                 }
-                document.write("Najwieksza liczba to " + maks);
+                document.write("Najwieksza liczba z tablicy to " + maks);
             }
+
             document.write("<br>");
             maxNumber(tab);
-            
+        
+
         </script>
+
+        <br>
+
+        <script>
+            function pokaz() {
+                document.getElementById("demo").innerHTML = "test";
+            }
+            function schowaj() {
+                document.getElementById("demo").innerHTML = " ";
+            }
+        </script>
+        <br>
+        <button onclick = "pokaz()"> Pokaż parametry </button>
+        <button onclick = "schowaj()"> Schowaj parametry </button>
+
+        <p id = "demo"> </p>
     </body>
 </html>
