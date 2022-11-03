@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                text-align: center;
+                font-size: 35px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <script>
+            function pokaz()
+            {
+                let data = new Date();
+                let dzien = data.getDay();
+                switch(dzien)
+                {
+                    case 1: 
+                        dzien = "poniedzialek";
+                        break;
+                    case 2: 
+                        dzien = "wtorek";
+                        break;
+                    case 3: 
+                        dzien = "sroda";
+                        break;
+                    case 4: 
+                        dzien = "czwartek";
+                        break;
+                    case 5: 
+                        dzien = "piatek";
+                        break;
+                    case 6: 
+                        dzien = "sobota";
+                        break;
+                    case 7: 
+                        dzien = "niedziela";
+                        break;
+                }
+                let godzina = data.getHours();
+                let minuta = data.getMinutes();
+                let sekunda = data.getSeconds(); 
+                document.getElementById("tekst").innerHTML = dzien + ", " + fix(godzina) + ":" + fix(minuta) + ":" + fix(sekunda); 
+            }
+
+            function fix(element) {
+                if(element < 10) {
+                    element = "0" + element;
+                    return element;        
+                  }
+                else
+                  {
+                    return element;
+                  }
+            }
+
+            setInterval(pokaz, 1000);
+
+        </script>
+
+        <input type = "button" onclick = "pokaz()" value = "zmien" />
+        <p id = "tekst"> Podmien ten tekst </p>
+    
+    </body>
+</html>

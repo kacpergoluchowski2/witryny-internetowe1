@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Zdarzenia </title>
+        <style>
+            body {
+                text-align: center;
+                font-size: 30px;
+                line-height: 12mm;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+    
+            function pokaz()
+            {
+                document.getElementById("tekst").innerHTML = "tekst podmieniony";
+            }
+
+            function schowaj()
+            {
+                document.getElementById("tekst").innerHTML = "podmien ten tekst";
+            }
+
+            function change()
+            {
+                document.getElementById("tekst").innerHTML = x;
+                let elementNewText = document.getElementById("tekstDoWymiany");
+                elementNewText.innerHTML = elementNewText.value;
+            }
+
+            
+        </script>
+
+        <input type = "text" id = "tekstDoWymiany" value = "przykladowy tekst"/>
+        <input type = "button" value = "podmien" onclick = "pokaz()"/>
+        <input type = "button" value = "Podmien" onclick = "schowaj()"/>
+
+        <input type = "button" value = "Wyswietl" onclick = "change()">
+        <p id = "tekst"> Podmien ten tekst </p>
+
+    </body>
+</html>

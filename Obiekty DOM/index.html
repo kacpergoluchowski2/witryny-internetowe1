@@ -14,7 +14,7 @@
         </style>
     </head>
 
-    <body>
+    <input>
         <script>
             document.write("Wysokosc okna " + window.innerHeight + "<br>");
             document.write("Szerokosc okna " + window.innerWidth + "<br>");
@@ -24,8 +24,22 @@
             document.write("Port: " + window.location.port + "<br>");
             document.write("Ścieżka " + window.location.pathname + "<br>");
 
-       </script>
+            function pokaz() {
+                document.getElementById("text").innerHTML = "cos";
+            }
+            
+            function schowaj() {
+                document.getElementById("text").innerHTML = "";
+            }
        
-       <br> 
+       </script>
+
+       <input type = "button" value = "pokaz" onclick = "pokaz()"/>
+       <input type = "button" value= "schowaj" onclick = "schowaj()" />
+
+       <p id = "text"> cos </p>
+
+       <input type = "button" value = "Witaj" onclick="alert('witaj na stronie')"/>
+       
     </body>
 </html>
