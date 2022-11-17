@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function div1()
+            {
+                let x = document.getElementById("name");
+                let y = document.getElementById("p1");
+
+                if(wiek.value.length==0 || x.va)
+
+            
+                if(x.value.length>0)
+                    y.innerHTML= "Witaj " + x.value;
+
+                else
+                    y.innerHTML = "brak danych do wprowadzenia";
+
+                let wiek = document.getElementById("old");
+                let change = document.getElementById("p2");
+
+                if(wiek.value.length==0)
+                    change.innerHTML = "Podaj wiek!"; 
+
+                if(wiek.value>=18)
+                    change.innerHTML = "Jestes pelnoletni";
+                else if(wiek.value<18)
+                    change.innerHTML = "Nie jestes pelnoletni";
+                else
+                    change.innerHTML = " ";
+                
+            }
+
+        </script>
+    </head>
+    <br>
+        <p> Podaj imię: </p>
+        <input type = "text" id = "name"/>
+        <p> Podaj wiek: </p>
+        <input type = "number" id = "old"/>
+        </br>
+        <input type = "button" value = "Działaj" onclick="div1()"/>
+        <div>
+            <p id = "p1">
+                
+            </p>
+
+            <p id = "p2">
+                
+            </p>
+        </div>
+
+    </body>
+</html>
