@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Stacja paliw </title>
+        <link rel = "stylesheet" href = "styl2.css"/>
+        <script>
+            function oblicz()
+            {
+                let rodzaj = document.getElementById("rodzajPaliwa").value;
+                let ilePaliwa = document.getElementById("ilePaliwa").value;
+                let koszt = document.getElementById("wynikObliczania").innerHTML;
+
+                if(rodzaj==1)
+                {
+                    let kosztPaliwa = 4 * ilePaliwa;
+                    koszt.innerHTML = kosztPaliwa;
+                }
+                else if(rodzaj==2)
+                {
+                    let kosztPaliwa = 3.5 * ilePaliwa;
+                    koszt.innerHTML = kosztPaliwa;
+                }
+                else
+                {
+                    return "Podano zły typ paliwa";
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div id = "baner">
+                <h1> Całodobowa stacja paliw </h1>
+            </div>
+
+            <div id = "menu">
+                <img src = "img/home.png" id = "imgLeft">
+                <img src = "img/znak.png" id = "imgRight">
+                Pobierz dokumentację
+            </div>
+
+
+            <div id = "left">   
+                <h2> Orientacyjny koszt paliwa </h2>
+                <br><br>
+                Rodzaj paliwa (1 - benzyna, 2 - olej napędowy)<br>
+                <input type = "text" id = "rodzajPaliwa"><br>
+                Ile litrów?
+                <br>
+                <input type = "text" id = "ilePaliwa"><br>
+                <input type = "button" onclick = "oblicz()" value="OBLICZ">
+                <p id = "wynikObliczania"> dwdw</p>
+            </div>
+
+            <div id = "right">
+                <img src = "img/samochod.jpg">
+            </div>
+
+            <div style = "clear: both;"></div>
+
+            <div id = "footer">
+                <p style = "margin-top: 50px;">Stronę opracował: Kacper Gołuchowski</p>
+            </div>
+        </div>
+    </body>
+</html>
