@@ -173,23 +173,15 @@
                         month = " Grudzien ";
                         break;
                 }
-                function zero()
+                function SecondsZero()
                 {
-                    if(data.getHours()<10)
+                    if(data.getSeconds<10)
                     {
                         return 0;
                     }
-                }
-                function minutes()
-                {
-                    if(data.getMinutes()<10)
-                    {
-                        return 0;
-                    }
-                }
-                
+                }     
                 document.write("<br><br><br>");
-                document.write("Dzisiaj jest: <br> "+ day + ", " + data.getDate() + month + " 2022 roku <br> Godzina: " + zero() + data.getHours() + ":" + minutes() + data.getMinutes() + ":" + data.getSeconds());
+                document.write("Dzisiaj jest: <br> "+ day + ", " + data.getDate() + month + " 2022 roku <br> Godzina: " + data.getHours() + ":" + "0" + data.getMinutes() + ":" + data.getSeconds());
             }
             wyswietlCzas();
 
