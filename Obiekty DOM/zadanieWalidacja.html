@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
@@ -6,34 +6,100 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <script>
-            function div1()
+            function walidacja()
             {
-                let x = document.getElementById("name");
-                let y = document.getElementById("p1");
-
-                if(wiek.value.length==0 || x.va)
-
-            
-                if(x.value.length>0)
-                    y.innerHTML= "Witaj " + x.value;
-
-                else
-                    y.innerHTML = "brak danych do wprowadzenia";
-
+                let imie = document.getElementById("name");
                 let wiek = document.getElementById("old");
-                let change = document.getElementById("p2");
+                let a = document.getElementById("p1");
+                let b = document.getElementById("p2");
 
-                if(wiek.value.length==0)
-                    change.innerHTML = "Podaj wiek!"; 
-
-                if(wiek.value>=18)
-                    change.innerHTML = "Jestes pelnoletni";
-                else if(wiek.value<18)
-                    change.innerHTML = "Nie jestes pelnoletni";
-                else
-                    change.innerHTML = " ";
+                if(wiek.value.length>0 && wiek.value>0 && imie.value.length>0)
+                {
+                        if(wiek.value>17)
+                        {
+                            a.innerHTML = sprawdzImie(imie.value);
+                            b.innerHTML = sprawdzWiek(wiek.value);
+                        }
+                            
+                        else if(wiek.value<18)
+                        {
+                            a.innerHTML = sprawdzImie(imie.value);
+                            b.innerHTML = sprawdzWiek(wiek.value);
+                        }
+                }
+                else if(imie.value == "Mateusz Mikolajczyk")
+                {
+                    a.innerHTML = "Jestes glupi";
+                    b.innerHTML = " ";
+                }
+                else if(wiek.value>130)
+                {
+                    a.innerHTML = "wiek jest z zakresu innego niz 0 - 130";
+                    b.innerHTML = " ";
+                }
+                else if(wiek.value.length==0 && imie.value.length==0)
+                {
+                    a.innerHTML = "Podaj imie i wiek";
+                    b.innerHTML = " ";
+                }
+                else if(wiek.value<0)
+                {
+                    a.innerHTML = "Wiek nie moze byc ujemny";
+                    b.innerHTML = " ";
+                }
+                else if(imie.value.length==0)
+                {
+                    a.innerHTML = "Podaj imie";
+                    b.innerHTML = " ";
+                }
+                else if(wiek.value.length==0)
+                {
+                    a.innerHTML = "Podaj wiek";
+                    b.innerHTML = " ";
+                }
                 
             }
+
+            function sprawdzWiek(wiek)
+            {
+                if(wiek>17)
+                {
+                    if ((isNaN(wiek)))
+                    {
+                        return " wiek nie jest liczba";
+                    }
+                    else
+                    {
+                        return " Jestes pelnoletni i masz " + wiek + " lat";
+                    }
+                }
+                if(wiek<18)
+                {
+                    if ((isNaN(wiek)))
+                    {
+                        return "wiek nie jest liczba";
+                    }
+                    else
+                    {
+                        return " Jestse niepelnoletni i masz " + wiek + " lat";
+                    }
+                }
+
+                
+            }
+            function sprawdzImie(imie)
+            {
+                if((isNaN(imie)))
+                {
+                    return "Witaj "  + imie;
+                }
+                else
+                {
+                    return " imie nie moze byc liczba";
+                    
+                }
+            }
+
 
         </script>
     </head>
@@ -41,9 +107,9 @@
         <p> Podaj imię: </p>
         <input type = "text" id = "name"/>
         <p> Podaj wiek: </p>
-        <input type = "number" id = "old"/>
+        <input type = "text" id = "old"/>
         </br>
-        <input type = "button" value = "Działaj" onclick="div1()"/>
+        <input type = "button" value = "Działaj" onclick="walidacja()"/>
         <div>
             <p id = "p1">
                 

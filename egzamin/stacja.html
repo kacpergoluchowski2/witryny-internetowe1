@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Stacja paliw </title>
+        <link rel = "stylesheet" href = "styl2.css"/>
+        <script>
+            function oblicz()
+            {
+                let rodzaj = document.getElementById("rodzajPaliwa");
+                let ilePaliwa = document.getElementById("ilePaliwa");
+                let koszt = document.getElementById("wynikObliczania");
+
+                if(rodzaj.value==1)
+                {
+                    let kosztPaliwa = 4 * ilePaliwa;
+                    koszt.innerHTML = kosztPaliwa;
+                }
+                else if(rodzaj.value==2)
+                {
+                    let kosztPaliwa = 3.5 * ilePaliwa;
+                    koszt.innerHTML = kosztPaliwa;
+                }
+                else
+                {
+                    return "Podano zły typ paliwa";
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <div id = "baner">
+                <h1> Całodobowa stacja paliw </h1>
+            </div>
+
+            <div id = "menu">
+                <a href = "stacja.html"> <img src = "img/home.png" id = "imgLeft"> </a>
+                <a href = "obliczenia.html"> <img src = "img/znak.png" id = "imgRight"> </a>
+                <a href = "#"> Pobierz dokumentację </a>            
+            </div>
+
+            <div id = "left">   
+                <div id = "tabela">
+                    <table border width = 90% height = 250>
+                        <tr>
+                            <td>Dzień</td> <td>Od</td> <td>Do</td>
+                        </tr>
+                        <tr>
+                            <td>Pn-Sb</td> <td>6:00</td> <td>24:00</td>
+                        </tr>
+                        <tr>
+                            <td>Nd</td> <td>7:00</td> <td>24:00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id = "right">
+                <img src = "img/samochod-removebg-preview.png">
+            </div>
+
+            <div style = "clear: both;"></div>
+
+            <div id = "footer">
+                <p style = "margin-top: 50px;">Stronę opracował: Kacper Gołuchowski</p>
+            </div>
+        </div>
+    </body>
+</html>
